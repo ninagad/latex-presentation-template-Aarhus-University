@@ -2,6 +2,7 @@
 \documentclass[t,24pt,aspectratio=169]{beamer}
 
 \input{AUstyle} % <- this brings in your styles
+\usepackage{transparent}
 
 \setbeamertemplate{footline}[frame number]
 
@@ -10,6 +11,7 @@
 {
 \setbeamertemplate{background}{%
   \makebox[\paperwidth][r]{
+  \transparent{0.3} % Opacity of watermark. Value between 0 (fully transparent) and 1 (opaque).
   \includegraphics[height=\paperheight]{AU/forside-logo.png}}
 }
 \begin{frame}[plain,noframenumbering]

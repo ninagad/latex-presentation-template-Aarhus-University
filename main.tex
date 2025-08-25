@@ -1,0 +1,55 @@
+% IMPORTANT! In order for the document to compile, one needs to use XeLaTeX or LuaLaTeX as compiler. This can be done in  Overleaf by Menu -> Settings -> Compiler -> Choose XeLaTeX/LuaLaTeX
+\documentclass[t,24pt,aspectratio=169]{beamer}
+
+\input{AUstyle} % <- this brings in your styles
+
+\setbeamertemplate{footline}[frame number]
+
+\begin{document}
+% The first slide. One can for instance change the main title, the subtitle, speaker, AU-unit and date
+{
+\setbeamertemplate{background}{%
+  \makebox[\paperwidth][r]{
+  \includegraphics[height=\paperheight]{AU/forside-logo.png}}
+}
+\begin{frame}[plain,noframenumbering]
+    \begin{textblock*}{\textwidth}(0\textwidth,0.1\textheight)
+        \begin{beamercolorbox}[wd=9cm,ht=7.3cm,sep=0.5cm]{hvidbox}
+            \fontsize{5}{10}\fontfamily{ptm}\selectfont
+            \textls[200]{AARHUS UNIVERSITY}
+            % Horizontal line
+            \noindent\textcolor{AUblaa}{\rule{8.3cm}{0.4pt}}
+        \end{beamercolorbox}
+    \end{textblock*}
+    \begin{textblock*}{\textwidth}(0\textwidth,0.1\textheight)
+        \begin{beamercolorbox}[wd=9cm,sep=0.5cm]{hvidbox}
+                \Huge \textcolor{AUblaa}{Title
+                }
+                \vspace{0.5cm}
+                \par
+                % This is the subtitle
+                \Large
+                Subtitle
+                \vspace{0.5cm}
+                \par
+                \normalsize
+                Date
+        \end{beamercolorbox}
+    \end{textblock*}
+    \begin{textblock}{1}(6,12.3)
+        \includegraphics[width=3cm]{AU/AU-logo.png}
+    \end{textblock}
+\end{frame}
+}
+
+% A standard slide. It's important that [hoved] is included after \begin{frame}
+% Before each slide, manually increment the page number to get the correct number of total slides.
+\addtocounter{framenumber}{1}
+\begin{frame}[hoved]
+\frametitle{Standard slide}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra rhoncus urna, et sodales magna efficitur et. Integer tempor augue eget ultricies malesuada. Praesent maximus sapien et tellus venenatis, nec consequat sem dictum. In lectus tellus, sagittis at massa in, tempor pretium quam. Pellentesque vel scelerisque mi.
+\\~\\
+Sed vel ligula egestas, commodo lacus in, cursus velit. Nam faucibus felis et nibh vehicula, eget aliquam justo facilisis. Aenean a dui sed libero malesuada dictum sit amet quis turpis. Nulla consectetur lorem at augue lacinia, ut rutrum neque vulputate. Aliquam ultrices suscipit felis vel pellentesque. Donec lacinia orci nec feugiat rhoncus. Nunc congue at velit vitae posuere. In hac habitasse platea dictumst.
+\end{frame}
+
+\end{document}
